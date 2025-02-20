@@ -1,0 +1,214 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{qrcode}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Matthew Wright}}\\
+	Denver, CO $\cdot$ wright.matthew91@gmail.com $\cdot$ 217.918.1247\\
+  linkedin.com/in/anothermatt/ $\cdot$ github.com/radiomime/\\
+% \vspace{5pt}
+% \qrcode[height=1in]{https://linkedin.com/in/anothermatt/}
+\end{center}
+
+
+% This used to be under my name:
+% Software engineer on Charter Communications’s Emerging Technology team with four years of experience.
+% Responsible for architecting and developing prototype product implementations in coordination with external companies,
+% presenting demos to non-technical leadership, and delivering reference designs to internal engineering teams.
+
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Onehot Labs} \hfill Remote\\
+\textit{Software Engineer} \hfill 2021 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+  \item Automated end-to-end testing framework using airflow and kubernetes, freeing an average of 10 hours of engineer time weekly and increasing the reliability of our release process
+  \item Worked closely with a customer to design, write, and release a new LLM application to process payments and create reports dynamically creating a new revenue stream for our company
+  \item Integrated external GPT services and internal transformer models to refine predictions, incrementally increasing accuracy, confidence, and revenue
+  \item Incorporated best practices like typing and linting into our existing and new applications. Added practical unit and integration tests to enhance development
+  \item Extended Jenkins CI/CD pipelines to automate testing and deployments to GCP through pulumi
+  \item Set up robust alerting and montoring systems enable engineers to quickly recognize and respond to production application issues, prioritizing safety nets over guardrails
+  \item Created a customer facing audit tool targetting difficult reports to have an outsized impact on data quality and model performance
+  \item Maintained and added features to main NLP product, addressing performance and scaling issues in our production environment
+
+  % CI/CD
+	% \item Created an audit tool and coordinated with customers to make 
+	% \item Incorporate best practices including CI/CD pipelines, testing, and robust alerting and monitoring systems, focusing on automating routine tasks and creating tools to increase our team's output and reliability
+	% \item Work closely with our machine learning and data team to enhance data quality, which directly translates into model accuracy and reliability
+	% \item Design, write, and deploy features focusing on increasing value opportunities and company revenue through iterative software practices
+	% \item Engineer robust inference time architecture to deploy NLP CNN and Transformer models, ensuring optimal performance in real-time applications
+\end{itemize}
+
+\textbf{Charter Communications} \hfill Denver, CO\\
+
+\textit{Software Engineer} \hfill 2020 - 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+  \item Created an automated, coordinated testing platform for testing groups of network clients. 
+    This enabled us to run repeatable, complex test suites for several clients 
+    to gain insights about network performance. Lead inventor on U.S. Patent 12,210,443 for the system design of the project
+  \item Developed a cloud control plane with a unified interface for IoT devices
+  \item Led development for a greenfield per-device speed configuration project,
+    adding a new revenue stream
+
+  % \item Integrated a 3rd party user agent into our router stack
+  % presence detection with Cognitive? 
+  % including routers and , moving router configuration from ...to help customers
+\end{itemize}
+
+\textit{Associate Software Engineer} \hfill 2018 - 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Containerized microservice application stack, and orchestrated deployment through Nomad
+	\item Designed prototype smart hub speaker/router combo device and demoed functionality for our leadership team
+	\item Wrote a custom, on device manager to collect and systematically send network data to a third party device identity product that was released to millions of devices
+	\item Led IoT smart hub integration with our router stack, contributed API and SIP client
+\end{itemize}
+
+\textbf{App Rev} \hfill Remote\\
+\textit{Data Analyst} \hfill 2017 - 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Automated ETL pipeline processes which increased processing speed by 50\% and reduced engineering costs
+	\item Created internal micro-applications to improve training data quality and inference time accuracy
+\end{itemize}
+
+
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & Typescript, Javascript, Python, SQL                         \\
+	Frameworks:            & Node, Express, Terraform, Nomad, Pulumi, Kafka, RabbitMQ    \\
+	Tools:                 & Git, Github, Neovim, Jira, Jenkins CI/CD, Postman, Gitlab   \\
+	Databases:             & BigQuery, Mongo, Postgres, Firestore                        \\
+  Cloud \& DevOps:       & Google Cloud, AWS, Kubernetes, Docker, Linux, Networking    \\
+\end{tabular}
+\vspace{2mm}
+
+
+% %==== Development Values ====%
+%
+% \header{Development Values}
+% \vspace{1mm}
+%
+% % should I bring up neovim and mac somewhere?
+%
+% \begin{itemize} \itemsep 0pt
+% 	\item Safety nets are more important that guardrails
+% 	\item Unit and integration tests are great, but they shouldn't get in the way of development
+% 	\item Design safety nets, not only guardrails. Planning for challenges is better than protecting against the possibility of failure
+% 	\item Try to use the best tool for the job, but don't get bogged down on perfection
+% \end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Colorado}\hfill Boulder, CO\\
+B.A. in Computer Science  \hfill May 2017\\
+\vspace{2mm}
+
+
+%==== Patents? ====%
+
+%==== Development Philosophy ====%
+%
+% \begin{minipage}[t]{0.7\textwidth}
+% \header{Development Philosophy}
+% \vspace{1mm}
+%
+% % should I bring up neovim and mac somewhere?
+%
+% \begin{itemize} \itemsep 0pt
+% 	\item Unit and integration tests are great, but they shouldn't get in the way of development
+% 	\item Design safety nets, not only guardrails. Planning for challenges is better than protecting against the possibility of failure
+% 	\item Try to use the best tool for the job, but don't get bogged down on perfection
+% \end{itemize}
+% \end{minipage}
+% \begin{minipage}[t]{0.29\textwidth}
+% \vspace{6pt}  % This aligns with the header
+% \begin{center}
+% \qrcode[height=1in]{https://linkedin.com/in/anothermatt/}
+% \end{center}
+% \end{minipage}
+
+% Good hot words
+% - design
+
+
+\
+\end{document}
