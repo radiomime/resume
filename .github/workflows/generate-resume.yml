@@ -1,0 +1,29 @@
+name: Build LaTeX Resume
+
+on:
+  push:
+    branches:
+      - main # Adjust to your branch name
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: sudo apt update && sudo apt install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-latex-recommended texlive-xetex
+
+      - name: Compile Resume
+        run: |
+          pdflatex -interaction=nonstopmode resume.tex
+          pdflatex -interaction=nonstopmode resume.tex  # Run twice for proper formatting
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Resume-PDF
+          path: resume.pdf
