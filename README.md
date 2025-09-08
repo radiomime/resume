@@ -4,7 +4,7 @@
 
 ### Requirements
 
-`pdflatex` is required, on mac that will come in `mactex`. Also, `skim` is required for rendering the pdf on save.
+`pdflatex` is required, on mac that will come in `mactex`. Also, `skim` is required for rendering the PDF on save.
 
 ### Generate a PDF
 
